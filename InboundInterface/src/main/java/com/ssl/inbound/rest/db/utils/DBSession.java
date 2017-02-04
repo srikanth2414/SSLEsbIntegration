@@ -1,4 +1,4 @@
-package com.ssl.inbound.rest.db.beans.util;
+package com.ssl.inbound.rest.db.utils;
 
 import org.apache.log4j.Logger;
 import org.hibernate.SessionFactory;

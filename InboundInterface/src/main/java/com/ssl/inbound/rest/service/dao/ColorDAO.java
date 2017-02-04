@@ -13,10 +13,9 @@ import com.ssl.inbound.rest.beans.Color;
 import com.ssl.inbound.rest.db.beans.CoClr;
 import com.ssl.inbound.rest.db.beans.CoClrI8;
 import com.ssl.inbound.rest.db.beans.CoClrI8Id;
-import com.ssl.inbound.rest.db.beans.util.DBSession;
-import com.ssl.inbound.rest.sqlIfc.UPCUpdateSQLIfc;
+import com.ssl.inbound.rest.db.utils.DBSession;
 
-public class ColorDAO  implements UPCUpdateSQLIfc
+public class ColorDAO 
 {
 	private static Logger logger = Logger.getLogger(ColorDAO.class);
 
