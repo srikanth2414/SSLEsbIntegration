@@ -8,7 +8,7 @@ import org.codehaus.jackson.annotate.JsonPropertyOrder;
 @JsonPropertyOrder({
 	"promotions"
 })
-public class PromoionImportRequest {
+public class PromotionImportRequest {
 
 	@JsonProperty("promotions")
 	private List<Promotion> promotions = null;
