@@ -2,6 +2,14 @@
 <!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
 
 <hibernate-reverse-engineering>
-  <table-filter match-name="CO_CLR"/>
-  <table-filter match-name="CO_CLR_I8"/>
-</hibernate-reverse-engineering>
+	<table-filter match-name="AS_ITM"/>
+  <table-filter match-name="ID_IDN_PS"/>
+  <table-filter match-name="PA_SPR"/>
+  <table-filter match-name="PA_SPR_I8"/>
+  <table-filter match-name="PA_PRTY"/>
+  <table-filter match-name="SSL_BRN"/>
+  <table-filter match-name="TX_ASGMT"/>
+  <table-filter match-name="AS_ITM_RTL_STR"/>
+  <table-filter match-name="CO_STYL_I8"/>
+  <table-filter match-name="CO_STYL"/>
+ </hibernate-reverse-engineering>

@@ -28,10 +28,110 @@ public class SSLInboundServiceImpl {
 	//Brand Interface: Start
 	public static Response insertBrandInfo(BrandImportRequest brandImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -114,57 +214,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
-
-		if(serviceResponse.getErrorCode() != null)
-		{
-			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
-		}
-		else
-		{
-			return Response.status(Status.OK).entity(serviceResponse).build();
-		}
-	}
-
-	public static Response deleteBrandInfo(BrandImportRequest brandImportRequest ) {
-
-		List<Color> colorImports =  colorImportRequest.getColors();
-		ServiceResponse serviceResponse = new ServiceResponse();
-
-		for (Color color : colorImports)
-		{
-			if(color != null)
-			{
-				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
-						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
-				{
-					try
-					{
-						ColorDAO.delete(color);
-
-						serviceResponse.setCorelationID(color.getCorelationID());
-						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
-					}
-					catch(Exception exception)
-					{
-						serviceResponse.setCorelationID(color.getCorelationID());
-						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
-					}
-				}
-				else
-				{
-					serviceResponse.setCorelationID(color.getCorelationID());
-					serviceResponse.setErrorCode("PRD000001");
-					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
-				}
-			}
-			else
-			{
-				//TODO:Color Object is null
-			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -180,10 +230,10 @@ public class SSLInboundServiceImpl {
 	//Item Interface: Start
 	public static Response insertItemsInfo(ItemImportRequest itemImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -228,7 +278,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateItemsInfo(ItemImportRequest itemImportRequest ) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -266,7 +316,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -278,12 +328,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteItemsInfo(ItemImportRequest itemImportRequest ) {
+	public static Response updateItemsInfo(ItemImportRequest itemImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -292,17 +342,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -317,6 +367,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteItemsInfo(ItemImportRequest itemImportRequest ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -332,10 +532,10 @@ public class SSLInboundServiceImpl {
 	//Merchandise Interface: Start
 	public static Response insertMerchandiseInfo(MerchandiseImportRequest merchandiseImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -380,7 +580,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateMerchandiseInfo(MerchandiseImportRequest merchandiseImportRequest ) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -418,7 +618,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -430,12 +630,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteMerchandiseInfo(MerchandiseImportRequest merchandiseImportRequest  ) {
+	public static Response updateMerchandiseInfo(MerchandiseImportRequest merchandiseImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -444,17 +644,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -469,6 +669,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteMerchandiseInfo(MerchandiseImportRequest merchandiseImportRequest  ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -484,10 +834,10 @@ public class SSLInboundServiceImpl {
 	//Promotion Interface: Start
 	public static Response insertPromotionInfo(PromotionImportRequest promotionImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -532,7 +882,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updatePromotionInfo(PromotionImportRequest promotionImportRequest ) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -570,7 +920,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -582,12 +932,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deletePromotionInfo(PromotionImportRequest promotionImportRequest  ) {
+	public static Response updatePromotionInfo(PromotionImportRequest promotionImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -596,17 +946,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -621,6 +971,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deletePromotionInfo(PromotionImportRequest promotionImportRequest  ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -636,10 +1136,10 @@ public class SSLInboundServiceImpl {
 	//Store Hierarchy Interface: Start
 	public static Response insertStoreInfo(StoreImportRequest storeImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -684,7 +1184,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateStoreInfo(StoreImportRequest storeImportRequest ) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -722,7 +1222,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -734,12 +1234,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteStoreInfo(StoreImportRequest storeImportRequest  )  {
+	public static Response updateStoreInfo(StoreImportRequest storeImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -748,17 +1248,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -773,6 +1273,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteStoreInfo(StoreImportRequest storeImportRequest  )  {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -788,10 +1438,10 @@ public class SSLInboundServiceImpl {
 	//Style Hierarchy Interface: Start
 	public static Response insertStyleInfo(StyleImportRequest styleImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -836,7 +1486,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateStyleInfo(StyleImportRequest styleImportRequest) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -874,7 +1524,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -886,12 +1536,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteStyleInfo(StyleImportRequest styleImportRequest)  {
+	public static Response updateStyleInfo(StyleImportRequest styleImportRequest) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -900,17 +1550,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -925,6 +1575,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteStyleInfo(StyleImportRequest styleImportRequest)  {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -940,10 +1740,10 @@ public class SSLInboundServiceImpl {
 	//Tax Hierarchy Interface: Start
 	public static Response insertTaxInfo(TaxImportRequest taxImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -988,7 +1788,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateTaxInfo(TaxImportRequest taxImportRequest ) {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -1026,7 +1826,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -1038,12 +1838,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteTaxInfo(TaxImportRequest taxImportRequest )  {
+	public static Response updateTaxInfo(TaxImportRequest taxImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -1052,17 +1852,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -1077,6 +1877,156 @@ public class SSLInboundServiceImpl {
 				//TODO:Color Object is null
 			}
 		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteTaxInfo(TaxImportRequest taxImportRequest )  {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -1092,10 +2042,10 @@ public class SSLInboundServiceImpl {
 	//UPC Hierarchy Interface: Start
 	public static Response insertUpcInfo(UpcImportRequest upcImportRequest ) {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -1140,7 +2090,7 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response updateUpcInfo(UpcImportRequest upcImportRequest )  {
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 		List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
@@ -1178,7 +2128,7 @@ public class SSLInboundServiceImpl {
 			{
 				//TODO:Color Object is null
 			}
-		}
+		}*/
 
 		if(serviceResponse.getErrorCode() != null)
 		{
@@ -1190,12 +2140,12 @@ public class SSLInboundServiceImpl {
 		}
 	}
 
-	public static Response deleteUpcInfo(UpcImportRequest upcImportRequest ) {
+	public static Response updateUpcInfo(UpcImportRequest upcImportRequest )  {
 
-		List<Color> colorImports =  colorImportRequest.getColors();
+		//List<Color> colorImports =  colorImportRequest.getColors();
 		ServiceResponse serviceResponse = new ServiceResponse();
 
-		for (Color color : colorImports)
+		/*for (Color color : colorImports)
 		{
 			if(color != null)
 			{
@@ -1204,17 +2154,17 @@ public class SSLInboundServiceImpl {
 				{
 					try
 					{
-						ColorDAO.delete(color);
+						ColorDAO.createOrUpdate(color);
 
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setResponseCode("100");
-						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 					}
 					catch(Exception exception)
 					{
 						serviceResponse.setCorelationID(color.getCorelationID());
 						serviceResponse.setErrorCode("PRD000003");
-						serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 					}
 				}
 				else
@@ -1239,15 +2189,165 @@ public class SSLInboundServiceImpl {
 			return Response.status(Status.OK).entity(serviceResponse).build();
 		}
 	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response deleteUpcInfo(UpcImportRequest upcImportRequest ) {
+
+		//List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		/*for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
+
+	public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+		List<Color> colorImports =  colorImportRequest.getColors();
+		ServiceResponse serviceResponse = new ServiceResponse();
+
+		for (Color color : colorImports)
+		{
+			if(color != null)
+			{
+				if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+						|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+				{
+					try
+					{
+						ColorDAO.createOrUpdate(color);
+
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setResponseCode("100");
+						serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+					}
+					catch(Exception exception)
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000003");
+						serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+					}
+				}
+				else
+				{
+					serviceResponse.setCorelationID(color.getCorelationID());
+					serviceResponse.setErrorCode("PRD000001");
+					serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+				}
+			}
+			else
+			{
+				//TODO:Color Object is null
+			}
+		}*/
+
+		if(serviceResponse.getErrorCode() != null)
+		{
+			return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+		}
+		else
+		{
+			return Response.status(Status.OK).entity(serviceResponse).build();
+		}
+	}
 	//UPC Hierarchy Interface: End
 	
 	//Vendor Hierarchy Interface: Start
 		public static Response insertVendorInfo(VendorImportRequest vendorImportRequest ) {
 
-			List<Color> colorImports =  colorImportRequest.getColors();
+			//List<Color> colorImports =  colorImportRequest.getColors();
 			ServiceResponse serviceResponse = new ServiceResponse();
 
-			for (Color color : colorImports)
+			/*for (Color color : colorImports)
 			{
 				if(color != null)
 				{
@@ -1292,7 +2392,7 @@ public class SSLInboundServiceImpl {
 			}
 		}
 
-		public static Response updateVendorInfo(VendorImportRequest vendorImportRequest )  {
+		public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
 
 			List<Color> colorImports =  colorImportRequest.getColors();
 			ServiceResponse serviceResponse = new ServiceResponse();
@@ -1330,7 +2430,7 @@ public class SSLInboundServiceImpl {
 				{
 					//TODO:Color Object is null
 				}
-			}
+			}*/
 
 			if(serviceResponse.getErrorCode() != null)
 			{
@@ -1342,12 +2442,12 @@ public class SSLInboundServiceImpl {
 			}
 		}
 
-		public static Response deleteVendorInfo(VendorImportRequest vendorImportRequest ) {
+		public static Response updateVendorInfo(VendorImportRequest vendorImportRequest )  {
 
-			List<Color> colorImports =  colorImportRequest.getColors();
+			//List<Color> colorImports =  colorImportRequest.getColors();
 			ServiceResponse serviceResponse = new ServiceResponse();
 
-			for (Color color : colorImports)
+			/*for (Color color : colorImports)
 			{
 				if(color != null)
 				{
@@ -1356,17 +2456,17 @@ public class SSLInboundServiceImpl {
 					{
 						try
 						{
-							ColorDAO.delete(color);
+							ColorDAO.createOrUpdate(color);
 
 							serviceResponse.setCorelationID(color.getCorelationID());
 							serviceResponse.setResponseCode("100");
-							serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" deleted scucessfully");
+							serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
 						}
 						catch(Exception exception)
 						{
 							serviceResponse.setCorelationID(color.getCorelationID());
 							serviceResponse.setErrorCode("PRD000003");
-							serviceResponse.setErrorMessage("SQL Error while deleting Color Id:"+color.getColorCode()+" in POS");
+							serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
 						}
 					}
 					else
@@ -1381,6 +2481,156 @@ public class SSLInboundServiceImpl {
 					//TODO:Color Object is null
 				}
 			}
+
+			if(serviceResponse.getErrorCode() != null)
+			{
+				return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+			}
+			else
+			{
+				return Response.status(Status.OK).entity(serviceResponse).build();
+			}
+		}
+
+		public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+			List<Color> colorImports =  colorImportRequest.getColors();
+			ServiceResponse serviceResponse = new ServiceResponse();
+
+			for (Color color : colorImports)
+			{
+				if(color != null)
+				{
+					if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+							|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+					{
+						try
+						{
+							ColorDAO.createOrUpdate(color);
+
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setResponseCode("100");
+							serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+						}
+						catch(Exception exception)
+						{
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setErrorCode("PRD000003");
+							serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+						}
+					}
+					else
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000001");
+						serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+					}
+				}
+				else
+				{
+					//TODO:Color Object is null
+				}
+			}*/
+
+			if(serviceResponse.getErrorCode() != null)
+			{
+				return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+			}
+			else
+			{
+				return Response.status(Status.OK).entity(serviceResponse).build();
+			}
+		}
+
+		public static Response deleteVendorInfo(VendorImportRequest vendorImportRequest ) {
+
+			//List<Color> colorImports =  colorImportRequest.getColors();
+			ServiceResponse serviceResponse = new ServiceResponse();
+
+			/*for (Color color : colorImports)
+			{
+				if(color != null)
+				{
+					if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+							|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+					{
+						try
+						{
+							ColorDAO.createOrUpdate(color);
+
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setResponseCode("100");
+							serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" inserted scucessfully");
+						}
+						catch(Exception exception)
+						{
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setErrorCode("PRD000003");
+							serviceResponse.setErrorMessage("SQL Error while inserting Color Id:"+color.getColorCode()+" in POS");
+						}
+					}
+					else
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000001");
+						serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+					}
+				}
+				else
+				{
+					//TODO:Color Object is null
+				}
+			}
+
+			if(serviceResponse.getErrorCode() != null)
+			{
+				return Response.status(Status.BAD_REQUEST).entity(serviceResponse).build();
+			}
+			else
+			{
+				return Response.status(Status.OK).entity(serviceResponse).build();
+			}
+		}
+
+		public static Response updateBrandInfo(BrandImportRequest brandImportRequest ) {
+
+			List<Color> colorImports =  colorImportRequest.getColors();
+			ServiceResponse serviceResponse = new ServiceResponse();
+
+			for (Color color : colorImports)
+			{
+				if(color != null)
+				{
+					if(color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode()))
+							|| color.getColorCode() != null && !("".equalsIgnoreCase(color.getColorCode())))
+					{
+						try
+						{
+							ColorDAO.createOrUpdate(color);
+
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setResponseCode("100");
+							serviceResponse.setResponseMessage("Color Id:"+color.getColorCode()+" updated scucessfully");
+						}
+						catch(Exception exception)
+						{
+							serviceResponse.setCorelationID(color.getCorelationID());
+							serviceResponse.setErrorCode("PRD000003");
+							serviceResponse.setErrorMessage("SQL Error while updating Color Id:"+color.getColorCode()+" in POS");
+						}
+					}
+					else
+					{
+						serviceResponse.setCorelationID(color.getCorelationID());
+						serviceResponse.setErrorCode("PRD000001");
+						serviceResponse.setErrorMessage("Mandatory parameter is Empty");
+					}
+				}
+				else
+				{
+					//TODO:Color Object is null
+				}
+			}*/
 
 			if(serviceResponse.getErrorCode() != null)
 			{
